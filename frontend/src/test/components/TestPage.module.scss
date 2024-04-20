@@ -1,0 +1,38 @@
+.test{
+  &Page {
+    margin-top: 20px;
+    padding: 50px;
+    border: 1px #DEE2E6FF solid;
+    border-radius: 10px;
+    background-color: #F6F7F8;
+  }
+}
+.header{
+  &Title{
+    text-align:center
+  }
+}
+.body{
+  display: grid;
+  grid-template-columns:1fr 5fr;
+  grid-template-areas:
+          "navigation content"
+          "navigation content";
+  gap:50px
+}
+.answer{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-top:20px
+}
+.navigation{
+  grid-templaate-area: navigation;
+  width: 250px;
+  border: 1px #DEE2E6FF solid;
+  padding:20px;
+  border-radius: 10px
+}
+.content{
+  grid-templaate-area: content;
+}

@@ -5,6 +5,8 @@ import { Button } from 'primereact/button';
 import { useMenuItem } from '../hooks/useMenuItem.ts';
 
 import classes from './UserProfilePage.module.scss';
+import { RatingBlock } from './RatingBlock.tsx';
+import { PublicationBlock } from './PublicationBlock.tsx';
 import { UserProfileDataBlock } from './UserProfileDataBlock.tsx';
 
 export const UserProfilePage = () => {
@@ -16,7 +18,8 @@ export const UserProfilePage = () => {
         <PanelMenu model={menuItem} className="w-full md:w-25rem" />
       </div>
       <div className={classes.content}>
-        content
+        <RatingBlock />
+        <PublicationBlock />
       </div>
       <div className={classes.user_data}>
         <div className={classes.avatar}>

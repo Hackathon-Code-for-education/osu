@@ -1,0 +1,16 @@
+.card {
+	cursor: pointer;
+}
+
+.footer {
+	display: flex;
+	flex-direction: row	;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.tags {
+	display: flex;
+	gap: 15px;
+	margin-bottom: 5px;
+}

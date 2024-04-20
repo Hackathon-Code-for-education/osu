@@ -156,7 +156,7 @@ export const useOAuth = ({
       });
 
     return refreshPromises[tokens.refreshToken];
-  }, [buildTokens, clientId, redirectUri, refreshPromises, tokenUrl]);
+  }, [buildTokens, clientId, redirectUri, refreshPromises, setIsAuthenticated, tokenUrl]);
 
   return { login, logout, getAccessToken, getRefreshToken };
 };

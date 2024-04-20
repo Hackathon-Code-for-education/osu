@@ -1,0 +1,23 @@
+.container {
+	cursor: pointer;
+
+	&:hover {
+		background-color: #f4f4f4;
+	}
+}
+
+.student {
+	display: grid;
+	grid-template-columns: 1fr 2fr 3fr;
+	gap: 20px;
+}
+
+.student_header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.student_content {
+
+}

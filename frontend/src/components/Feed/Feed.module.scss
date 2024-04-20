@@ -1,0 +1,171 @@
+.feedPage {
+  display: flex;
+}
+
+.feedList {
+  width: 70%;
+}
+
+.aside {
+  overflow: hidden;
+  width:250px;
+}
+
+.searchGroup {
+  position: sticky;
+  top: 30px;
+  right: 100px;
+  height: 500px;
+}
+
+.feedItem {
+  background-color: white;
+  border-radius: 5px;
+  width: 70%;
+  padding: 20px;
+  margin: 0 auto 20px auto;
+}
+
+.feedItem_header {
+  position: relative;
+
+  &__userInfo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__header_text {
+
+  }
+
+  &__avatar {
+    background-image: url('../../../public/Ellipse 3.svg');
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+  }
+
+  &__userName {
+    font-weight: 500;
+    font-size: 14px
+  }
+
+  &__date {
+    font-weight: 300;
+    font-size: 12px;
+    color: gray;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  &__chipsGroup {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    font-size: 10px;
+    right: 0;
+    top: -10px;
+  }
+
+  &__saved {
+
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    gap: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.feedItem_main {
+
+  &__description {
+    font-weight: 300;
+    font-size: 16px;
+    margin: 20px 0;
+  }
+
+  &__image {
+    background-image: url("https://248006.selcdn.ru/main/iblock/978/978ddf0968521f042b5a71ea9667ae13/fd45c8d46d61cb8f1736298e84ffb0db.jpg");
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+.feedItem_bottom {
+  margin-top: 20px;
+  position: relative;
+
+  & > i:first-child {
+    margin-right: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  & > i:not(:first-child) {
+    margin-left: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.tags {
+  font-size: 10px
+}
+
+.chip {
+  background-color: slateblue;
+  color: white;
+
+  & > img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin: 0 0.5rem 0 0;
+  }
+}
+
+.filterItem{
+  width: 100%;
+  margin-bottom: 20px;
+
+  &__input{
+    width: 100%;
+  }
+}
+
+.feedFilter__buttonGroup{
+  display: flex;
+  margin-top: 30px;
+  gap:10px;
+}
+.editFeed{
+  background-color: white;
+  padding: 50px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}

@@ -3,7 +3,7 @@ import { localStorageNames } from '../../main/constants/localStorageNames.ts';
 import { AuthActionEnum } from '../enums/AuthActionEnum.ts';
 import { useOAuth } from '../hooks/useOAuth.ts';
 import { IOAuthProps } from '../interfaces/IOAuthProps.ts';
-import { OPENID_CALLBACK_URL } from '../../api/constants/urls.ts';
+import { OPENID_CALLBACK_URL } from '../../core/config/urls.ts';
 import { ITokens } from '../interfaces/ITokens.ts';
 import { useAppSelector } from '../../core/store/hooks/useAppSelector.ts';
 import { AuthSelector } from '../selectors/AuthSelector.ts';

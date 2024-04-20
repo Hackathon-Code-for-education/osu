@@ -1,0 +1,24 @@
+.title{
+  text-align: center;
+}
+
+.map{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mapTitle{
+  text-align: center;
+  font-weight: 600;
+  font-size: 36px;
+}
+path:hover{
+  fill: #64748B;
+  cursor:pointer
+}
+
+@media screen and (width<700px ){
+  .mapItem{
+    height: 250px;
+  }
+}

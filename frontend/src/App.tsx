@@ -9,7 +9,7 @@ import {
   KEYCLOAK_AUTHORIZE_URL,
   KEYCLOAK_TOKEN_URL,
   REDIRECT_URL,
-} from './api/constants/urls.ts';
+} from './core/config/urls.ts';
 
 export const App = () => {
   return (
