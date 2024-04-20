@@ -1,0 +1,21 @@
+@import "./variables";
+@import "./reset";
+@import "./shared";
+
+// scroll
+*::-webkit-scrollbar {
+	width: 4px;
+}
+
+*::-webkit-scrollbar:horizontal {
+	height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+	background: $white;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: $black;
+	border-radius: 2px;
+}

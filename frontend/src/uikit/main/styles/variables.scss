@@ -1,0 +1,20 @@
+$font-family: 'JetBrains Mono', monospace;
+
+$white: #ffffff;
+$black: #000000;
+$error-color: #e21a1a;
+$red: #e21a1a;
+$blue: #4087d9;
+$green: #3bc550;
+$orange: #f98011;
+
+$line-height_lower: 1.5em;
+$line-height_above: 1.3em;
+
+// constants for z-index
+$index-base: 1;
+$index-overlay: 2;
+$index-modal: 3;
+$index-dropdown: 4;
+$index-popup: 5;
+$index-global-overlay: 6;

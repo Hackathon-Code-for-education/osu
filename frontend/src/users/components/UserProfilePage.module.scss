@@ -1,0 +1,44 @@
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "sideBar content"
+                       "sideBar content";
+  gap: 50px
+}
+
+.sideBar {
+  grid-template-area: sideBar;
+}
+
+.content {
+  grid-template-area: content;
+  display: grid;
+  gap: 40px;
+
+  &_data {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.avatar {
+  background-color: #E9ECEF;
+  padding:5px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0.15rem #C7D2FE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.user_data {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
