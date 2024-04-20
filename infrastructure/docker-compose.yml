@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - '80:80'
+  teamcity-server:
+    image: jetbrains/teamcity-server
+  teamcity-database:
+    image: postgres:16-alpine
+  teamcity-agent:
+    image: jetbrains/teamcity-agent
+    environment:
+      - SERVER_URL=http://teamcity-server:8111/
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      mode: replicated
+      replicas: 3

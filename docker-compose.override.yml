@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+  api-service:
+    build:
+      context: api-service
+    volumes:
+      - ./api-service/src/api_service:/app/.venv/lib/python3.11/site-packages/api_service
+      - ./api-service/poetry.lock:/app/poetry.lock
+      - ./api-service/pyproject.toml:/app/pyproject.toml
+      - ./api-service/alembic.ini:/app/alembic.ini
+      - ./api-service/migrations:/app/migrations
+    command:
+      - "--reload"
+      - "--log-level=debug"
+    ports:
+      - "8020:5000"
+
+  main-db:
+    ports:
+      - "5555:5432"
+
+  frontend:
+    build:
+      context: frontend
+
+  keycloak:
+    environment:
+      KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN:-admin}
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD:-admin}
+
+volumes:
+  main-db:
+    external: false
+  keycloak-db:
+    external: false
+
+networks:
+  strain_network:
+    external: false
