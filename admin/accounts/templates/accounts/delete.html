@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    Удаление пользоватлея "{{ object.username }}"
+    <form method="POST">
+        {% csrf_token %}
+        <span>Пользователь "{{ object.username }}" будет удален без возможности восстановления. Удалить пользователя?</span>
+        <br>
+        <input type="submit">
+    </form>
+{% endblock %}

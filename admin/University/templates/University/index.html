@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link href="{% static 'css/index.css' %}" rel="stylesheet">
+<link href="{% static 'css/authorization.css' %}" rel="stylesheet"> -->
+{% endblock %}
+
+{% block js %}
+<!-- <script src="{% static 'js/authorization.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script> -->
+{% endblock %}
+
+{% block body %}
+
+<ul>
+    {% if request.user.is_authenticated %}
+    Привет, {{ request.user }}!
+    <br>
+    {% if request.user.is_staff %}
+    <li><a href="{% url 'admin:index' %}">Админ панель</a></li>
+    {% endif %}
+    <li><a href="{% url 'accounts:logout' %}">Выйти</a></li>
+    {% else %}
+    <li><a href="{% url 'accounts:login' %}">Войти</a></li>
+    <li><a href="{% url 'accounts:register' %}">Зарегистрироваться</a></li>
+    {% endif %}
+
+</ul>
+
+{% endblock %}
