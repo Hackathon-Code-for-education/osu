@@ -1,0 +1,16 @@
+node_modules/
+**/*.scss
+**/*.svg
+**/*.png
+src/assets/fonts/
+package*.json
+tsconfig.json
+tsconfig.node.json
+index.html
+**/*.docx
+public
+dist
+deploy
+.prettierignore
+Jenkinsfile
+.eslintignore
